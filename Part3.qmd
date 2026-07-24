@@ -35,7 +35,7 @@ Il y a 5 fonction. Ce sont:
 -   fonction run_chain_ext : pour faire des chaines en même temps
 -   fonction get_temp_site : Récupérer et calculer les températures moyennes annuelles
 
-Dans cette partie, nous avons exploité les coordonnées des sites afin de récupérer các données de température via la NASA en utilisant le package "nasapower". Malheureusement, ce package ne fournit plus các températures annuelles directes, mais seulement các données mensuelles. Par conséquent, nous các avons récupérées và calculé "à la main" các moyennes annuelles.(T2M)
+Dans cette partie, nous avons exploité les coordonnées des sites afin de récupérer les données de température via la NASA en utilisant le package "nasapower". Malheureusement, ce package ne fournit plus les températures annuelles directes, mais seulement les données mensuelles. Par conséquent, nous les avons récupérées et calculé "à la main" les moyennes annuelles.(T2M)
 
 ```{r}
 # ------------------------------------------------------------------------------
