@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0082)https://hoangviet1810.github.io/Projet_Modele_hierarchique_bayesien_pour_ecologie/ -->
-<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moustique Tigre — Modèle Bayésien Hiérarchique</title>
-<link href="./Moustique Tigre — Modèle Bayésien Hiérarchique_files/css2" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --c:#00d4ff;--c2:rgba(0,212,255,0.15);--cg:rgba(0,212,255,0.4);
@@ -449,9 +449,9 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 [data-reveal].vis{opacity:1;transform:translateY(0)}
 </style>
 </head>
-<body style="">
+<body>
 <!-- INTRO OVERLAY -->
-<div id="intro-overlay" class="fade-out hidden" style="height: 1094px;">
+<div id="intro-overlay">
   <div class="intro-ring-wrap">
     <div class="intro-ring intro-ring-1"></div>
     <div class="intro-ring intro-ring-2"></div>
@@ -472,12 +472,12 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 <nav>
   <div class="nav-brand"><div class="nav-dot"></div><div class="nav-dot-r"></div>MOUSTIQUE TIGRE</div>
   <div class="nav-links">
-    <a href="https://hoangviet1810.github.io/Projet_Modele_hierarchique_bayesien_pour_ecologie/#hero" class="active">Accueil</a>
-    <a href="https://hoangviet1810.github.io/Projet_Modele_hierarchique_bayesien_pour_ecologie/#parties" class="">Parties</a>
-    <a href="https://hoangviet1810.github.io/Projet_Modele_hierarchique_bayesien_pour_ecologie/#viewer" class="">Codes</a>
-    <a href="https://hoangviet1810.github.io/Projet_Modele_hierarchique_bayesien_pour_ecologie/#dashboard" class="">Dashboard</a>
-    <a href="https://hoangviet1810.github.io/Projet_Modele_hierarchique_bayesien_pour_ecologie/#modele" class="">Modèle</a>
-    <a href="https://hoangviet1810.github.io/Projet_Modele_hierarchique_bayesien_pour_ecologie/#equipe">Équipe</a>
+    <a href="#hero">Accueil</a>
+    <a href="#parties">Parties</a>
+    <a href="#viewer">Codes</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#modele">Modèle</a>
+    <a href="#equipe">Équipe</a>
     <a href="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/" target="_blank" class="nav-ext">Site Quarto ↗</a>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()"><span class="theme-icon" id="theme-icon">☀️</span><span id="theme-label">Clair</span></button>
   </div>
@@ -495,12 +495,12 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
   <div class="hero-latin">Aedes albopictus · France métropolitaine · 2014 – 2025</div>
   <p class="hero-desc">Modélisation de la présence du moustique tigre en France par un modèle hiérarchique bayésien, avec inférence HMC (100 000 itérations, 5 chaînes). Analyse de la variabilité inter-site et intra-site des occurrences à partir des données GBIF.</p>
   <div class="ctas">
-    <a href="https://hoangviet1810.github.io/Projet_Modele_hierarchique_bayesien_pour_ecologie/#viewer" class="btn-p">Explorer les codes</a>
-    <a href="https://hoangviet1810.github.io/Projet_Modele_hierarchique_bayesien_pour_ecologie/#dashboard" class="btn-g">Voir le Dashboard</a>
+    <a href="#viewer" class="btn-p">Explorer les codes</a>
+    <a href="#dashboard" class="btn-g">Voir le Dashboard</a>
     <a href="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/Rapport.pdf" target="_blank" class="btn-g">Voir le Rapport ↗</a>
     <a href="https://github.com/Hoangviet1810/Projet-Modele-bayesien-pour-ecologie" target="_blank" class="btn-g">GitHub ↗</a>
   </div>
-  <div class="stats-row vis" data-reveal="">
+  <div class="stats-row" data-reveal>
     <div class="stat-cell"><div class="stat-v gold">2 209</div><div class="stat-l">Occurrences GBIF</div></div>
     <div class="stat-cell"><div class="stat-v">100K</div><div class="stat-l">Itérations HMC</div></div>
     <div class="stat-cell"><div class="stat-v gold">5</div><div class="stat-l">Chaînes MCMC</div></div>
@@ -514,22 +514,22 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 
 <!-- PARTIES OVERVIEW -->
 <section id="parties">
-  <div class="shdr vis" data-reveal="">
+  <div class="shdr" data-reveal>
     <div class="stag">// structure du projet</div>
     <div class="stitle">Organisation des <span class="hl">Parties</span></div>
     <div class="sline"></div>
   </div>
-  <div class="parts-grid vis" data-reveal="">
-    <div class="pc" onclick="openPart(&#39;part1&#39;)">
+  <div class="parts-grid" data-reveal>
+    <div class="pc" onclick="openPart('part1')">
       <div class="ct"></div>
       <div class="pc-num">01</div>
-      <div class="pc-tag">// données &amp; pré-traitement</div>
+      <div class="pc-tag">// données & pré-traitement</div>
       <div class="pc-title">Extraction des données GBIF</div>
       <div class="pc-body">2 209 occurrences d'<em>Aedes albopictus</em> extraites via l'API GBIF (R package <code>rgbif</code>). Nettoyage des valeurs manquantes, sélection des colonnes pertinentes, agrégation par site et par année, visualisations géographiques.</div>
       <div class="tags"><span class="tag">rgbif</span><span class="tag">dplyr</span><span class="tag">sf</span><span class="tag">ggplot2</span><span class="tag">maps</span></div>
       <div class="pc-goto">→ Voir le code complet</div>
     </div>
-    <div class="pc" onclick="openPart(&#39;part2_1&#39;)">
+    <div class="pc" onclick="openPart('part2_1')">
       <div class="ct"></div>
       <div class="pc-num">02A</div>
       <div class="pc-tag">// modèle version 1</div>
@@ -538,7 +538,7 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
       <div class="tags"><span class="tag">HMC</span><span class="tag">leapfrog</span><span class="tag">log-posterior</span><span class="tag">R-hat</span><span class="tag">PPD</span></div>
       <div class="pc-goto">→ Voir le code complet</div>
     </div>
-    <div class="pc" onclick="openPart(&#39;part2_2&#39;)">
+    <div class="pc" onclick="openPart('part2_2')">
       <div class="ct"></div>
       <div class="pc-num">02B</div>
       <div class="pc-tag">// modèle version 2</div>
@@ -547,10 +547,10 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
       <div class="tags"><span class="tag">vectorisé</span><span class="tag">ACF</span><span class="tag">PSIS-LOO</span><span class="tag">coda</span><span class="tag">ggplot2</span></div>
       <div class="pc-goto">→ Voir le code complet</div>
     </div>
-    <div class="pc" onclick="openPart(&#39;part3&#39;)">
+    <div class="pc" onclick="openPart('part3')">
       <div class="ct"></div>
       <div class="pc-num">03</div>
-      <div class="pc-tag">// extension &amp; covariables</div>
+      <div class="pc-tag">// extension & covariables</div>
       <div class="pc-title">Modèle étendu avec covariable température</div>
       <div class="pc-body">Extension : log λ<sub>ij</sub> = α<sub>j</sub> + β·x<sub>ij</sub> où x<sub>ij</sub> est la température moyenne annuelle (NASA Power T2M). β ~ N(0,10). Récupération manuelle des données mensuelles NASA et calcul des moyennes annuelles par site.</div>
       <div class="tags"><span class="tag">nasapower</span><span class="tag">T2M</span><span class="tag">β covariable</span><span class="tag">Extension</span><span class="tag">hyperpriors</span></div>
@@ -563,20 +563,20 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 
 <!-- PART VIEWER -->
 <section id="viewer" class="wide" style="padding-left:40px;padding-right:40px">
-  <div class="shdr vis" data-reveal="">
+  <div class="shdr" data-reveal>
     <div class="stag">// navigateur de code</div>
     <div class="stitle">Accès aux <span class="hl">Parties</span></div>
     <div class="sline"></div>
   </div>
 
-  <div class="part-nav vis" data-reveal="">
-    <button class="pnav-btn active" onclick="openPart(&#39;part1&#39;)">01 · Données</button>
-    <button class="pnav-btn" onclick="openPart(&#39;part2_1&#39;)">02A · Modèle V1</button>
-    <button class="pnav-btn" onclick="openPart(&#39;part2_2&#39;)">02B · Modèle V2</button>
-    <button class="pnav-btn" onclick="openPart(&#39;part3&#39;)">03 · Extension</button>
+  <div class="part-nav" data-reveal>
+    <button class="pnav-btn active" onclick="openPart('part1')">01 · Données</button>
+    <button class="pnav-btn" onclick="openPart('part2_1')">02A · Modèle V1</button>
+    <button class="pnav-btn" onclick="openPart('part2_2')">02B · Modèle V2</button>
+    <button class="pnav-btn" onclick="openPart('part3')">03 · Extension</button>
   </div>
 
-  <div class="part-viewer vis" data-reveal="">
+  <div class="part-viewer" data-reveal>
     <div class="part-header">
       <div class="part-header-title" id="frame-label">// PARTIE 1 — Extraction des données</div>
       <div class="part-header-actions">
@@ -585,13 +585,15 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
       </div>
     </div>
     <div class="part-iframe-wrap" id="frame-wrap">
-      <div class="part-loading hide" id="frame-loader">
+      <div class="part-loading" id="frame-loader">
         <div class="part-loading-inner">
           <div class="ld-ring"></div>
           <div class="ld-txt">CHARGEMENT...</div>
         </div>
       </div>
-      <iframe id="main-frame" src="./Moustique Tigre — Modèle Bayésien Hiérarchique_files/Part1.html" onload="document.getElementById(&#39;frame-loader&#39;).classList.add(&#39;hide&#39;)">
+      <iframe id="main-frame"
+        src="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/Part1.html"
+        onload="document.getElementById('frame-loader').classList.add('hide')">
       </iframe>
     </div>
   </div>
@@ -601,7 +603,7 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 
 <!-- DASHBOARD -->
 <section id="dashboard" class="wide" style="padding-left:40px;padding-right:40px">
-  <div class="shdr vis" data-reveal="">
+  <div class="shdr" data-reveal>
     <div class="stag">// visualisation interactive</div>
     <div class="stitle">Dashboard <span class="hl">Interactif</span></div>
     <div class="sline"></div>
@@ -609,7 +611,7 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
       Visualisations des distributions a posteriori, diagnostics de convergence, cartes de présence et analyses prédictives.
     </p>
   </div>
-  <div class="dash-frame vis" data-reveal="">
+  <div class="dash-frame" data-reveal>
     <div class="part-header">
       <div class="part-header-title">// DASHBOARD — Moustique Tigre · Modèle Bayésien</div>
       <div class="part-header-actions">
@@ -617,14 +619,15 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
       </div>
     </div>
     <div style="position:relative">
-      <div class="part-loading hide" id="dash-loader">
+      <div class="part-loading" id="dash-loader">
         <div class="part-loading-inner">
           <div class="ld-ring"></div>
           <div class="ld-txt">CHARGEMENT DU DASHBOARD...</div>
         </div>
       </div>
-      <div class="dash-iframe-scaler" id="dash-scaler" style="height: 85vh;">
-        <iframe id="dash-iframe" src="./Moustique Tigre — Modèle Bayésien Hiérarchique_files/dashboard_moustique.html" onload="document.getElementById(&#39;dash-loader&#39;).classList.add(&#39;hide&#39;);scaleDashboard()" style="width: 100%; height: 85vh; transform: none;">
+      <div class="dash-iframe-scaler" id="dash-scaler">
+        <iframe id="dash-iframe" src="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/images/dashboard_moustique.html"
+          onload="document.getElementById('dash-loader').classList.add('hide');scaleDashboard()">
         </iframe>
       </div>
     </div>
@@ -635,14 +638,14 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 
 <!-- MODELE -->
 <section id="modele">
-  <div class="shdr vis" data-reveal="">
+  <div class="shdr" data-reveal>
     <div class="stag">// spécification probabiliste</div>
     <div class="stitle">Architecture du <span class="hl">Modèle</span></div>
     <div class="sline"></div>
   </div>
-  <div class="model-grid vis" data-reveal="">
+  <div class="model-grid" data-reveal>
     <div class="mbox">
-      <div class="mbox-t">// Modèle de base (Part.1 &amp; 2)</div>
+      <div class="mbox-t">// Modèle de base (Part.1 & 2)</div>
       <div class="ml">Y<sub>i,j</sub> | λ<sub>i</sub> ~ Poisson(λ<sub>i</sub>)</div>
       <div class="mc">Comptages annuels, site j</div>
       <div class="ml">log(λ<sub>i</sub>) | μ, σ² ~ N(μ, σ²)</div>
@@ -670,14 +673,14 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
     </div>
   </div>
 
-  <div style="margin-top:20px;background:var(--bg2);border:1px solid var(--bd);padding:22px 26px;width:100%" data-reveal="" class="vis">
-    <div style="font-family:&#39;Share Tech Mono&#39;,monospace;font-size:10px;color:var(--c);letter-spacing:.2em;margin-bottom:14px;opacity:.7">// 5 FONCTIONS CLÉS (par version)</div>
+  <div style="margin-top:20px;background:var(--bg2);border:1px solid var(--bd);padding:22px 26px;width:100%" data-reveal>
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--c);letter-spacing:.2em;margin-bottom:14px;opacity:.7">// 5 FONCTIONS CLÉS (par version)</div>
     <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px">
-      <div><div style="font-family:&#39;Orbitron&#39;,monospace;font-size:11px;color:var(--g);margin-bottom:5px;text-shadow:0 0 8px var(--gg)">log_posterior</div><div style="font-size:11.5px;color:var(--txm)">Calcul de la log-densité a posteriori</div></div>
-      <div><div style="font-family:&#39;Orbitron&#39;,monospace;font-size:11px;color:var(--c);margin-bottom:5px">gradient</div><div style="font-size:11.5px;color:var(--txm)">Gradients analytiques de −log π(θ|y)</div></div>
-      <div><div style="font-family:&#39;Orbitron&#39;,monospace;font-size:11px;color:var(--g);margin-bottom:5px;text-shadow:0 0 8px var(--gg)">leapfrog</div><div style="font-size:11.5px;color:var(--txm)">Intégration hamiltonienne (ε, L steps)</div></div>
-      <div><div style="font-family:&#39;Orbitron&#39;,monospace;font-size:11px;color:var(--c);margin-bottom:5px">HMC_step</div><div style="font-size:11.5px;color:var(--txm)">Proposition + critère Metropolis–Hastings</div></div>
-      <div><div style="font-family:&#39;Orbitron&#39;,monospace;font-size:11px;color:var(--g);margin-bottom:5px;text-shadow:0 0 8px var(--gg)">run_chain</div><div style="font-size:11.5px;color:var(--txm)">5 chaînes parallèles, 100K itérations</div></div>
+      <div><div style="font-family:'Orbitron',monospace;font-size:11px;color:var(--g);margin-bottom:5px;text-shadow:0 0 8px var(--gg)">log_posterior</div><div style="font-size:11.5px;color:var(--txm)">Calcul de la log-densité a posteriori</div></div>
+      <div><div style="font-family:'Orbitron',monospace;font-size:11px;color:var(--c);margin-bottom:5px">gradient</div><div style="font-size:11.5px;color:var(--txm)">Gradients analytiques de −log π(θ|y)</div></div>
+      <div><div style="font-family:'Orbitron',monospace;font-size:11px;color:var(--g);margin-bottom:5px;text-shadow:0 0 8px var(--gg)">leapfrog</div><div style="font-size:11.5px;color:var(--txm)">Intégration hamiltonienne (ε, L steps)</div></div>
+      <div><div style="font-family:'Orbitron',monospace;font-size:11px;color:var(--c);margin-bottom:5px">HMC_step</div><div style="font-size:11.5px;color:var(--txm)">Proposition + critère Metropolis–Hastings</div></div>
+      <div><div style="font-family:'Orbitron',monospace;font-size:11px;color:var(--g);margin-bottom:5px;text-shadow:0 0 8px var(--gg)">run_chain</div><div style="font-size:11.5px;color:var(--txm)">5 chaînes parallèles, 100K itérations</div></div>
     </div>
   </div>
 </section>
@@ -686,16 +689,16 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 
 <!-- EQUIPE -->
 <section id="equipe">
-  <div class="shdr vis" data-reveal="">
+  <div class="shdr" data-reveal>
     <div class="stag">// auteurs</div>
     <div class="stitle">L'<span class="hl">Équipe</span></div>
     <div class="sline"></div>
   </div>
-  <div class="team-grid vis" data-reveal="">
+  <div class="team-grid" data-reveal>
     <div class="tc">
       <div class="tav">V</div>
       <div class="tname">NGUYEN Duc Hoang Viet</div>
-      <div class="trole">M1 Mathématiques &amp; Applications · ISN</div>
+      <div class="trole">M1 Mathématiques & Applications · ISN</div>
       <div class="tlinks">
         <a href="https://github.com/Hoangviet1810" target="_blank" class="tlink">GitHub</a>
         <a href="https://ndhviet.wixsite.com/hviet-portfolio" target="_blank" class="tlink">Portfolio</a>
@@ -705,14 +708,14 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
     <div class="tc">
       <div class="tav">Y</div>
       <div class="tname">Tchanang Yvan Michel</div>
-      <div class="trole">M1 Mathématiques &amp; Applications · ISN</div>
+      <div class="trole">M1 Mathématiques & Applications · ISN</div>
       <div class="tlinks">
-        <span style="font-family:&#39;Share Tech Mono&#39;,monospace;font-size:9px;color:var(--txm);letter-spacing:.08em">Université de Lille · 2025–2026</span>
+        <span style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--txm);letter-spacing:.08em">Université de Lille · 2025–2026</span>
       </div>
     </div>
   </div>
-  <div style="text-align:center;margin-top:36px" data-reveal="" class="vis">
-    <div style="font-family:&#39;Share Tech Mono&#39;,monospace;font-size:10px;color:var(--txm);letter-spacing:.12em;margin-bottom:18px;text-transform:uppercase">Voir le projet complet en ligne</div>
+  <div style="text-align:center;margin-top:36px" data-reveal>
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--txm);letter-spacing:.12em;margin-bottom:18px;text-transform:uppercase">Voir le projet complet en ligne</div>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <a href="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/" target="_blank" class="btn-p">Site Quarto complet ↗</a>
       <a href="https://github.com/Hoangviet1810/Projet-Modele-bayesien-pour-ecologie" target="_blank" class="btn-g">GitHub ↗</a>
@@ -729,9 +732,9 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
     <a href="https://ndhviet.wixsite.com/hviet-portfolio" target="_blank">Portfolio</a>
     <a href="https://www.gbif.org/" target="_blank">GBIF</a>
   </div>
-  <div class="fcopy">© 2026 NGUYEN D.H.V. &amp; Tchanang Y.M. — Université de Lille</div>
+  <div class="fcopy">© 2026 NGUYEN D.H.V. & Tchanang Y.M. — Université de Lille</div>
 </footer>
-<div style="text-align:center;padding:12px 0 18px;font-family:&#39;Share Tech Mono&#39;,monospace;font-size:10px;letter-spacing:.15em;color:var(--txm);background:var(--bg)">Created by <span style="color:var(--c)">Nguyen Duc Hoang Viet</span></div>
+<div style="text-align:center;padding:12px 0 18px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--txm);background:var(--bg)">Created by <span style="color:var(--c)">Nguyen Duc Hoang Viet</span></div>
 
 <script>
 const partConfig = {
@@ -833,6 +836,5 @@ function scaleDashboard(){
 window.addEventListener('resize', scaleDashboard);
 scaleDashboard();
 </script>
-
-
-</body></html>
+</body>
+</html>
