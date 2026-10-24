@@ -51,7 +51,8 @@ body.light-mode .trole{color:#3a5060}
 body.light-mode .tlink{color:#0a4a70;border-color:rgba(0,100,160,0.45);background:rgba(0,100,160,0.07);font-weight:600}
 body.light-mode .tlink:hover{background:rgba(0,100,160,0.18);border-color:rgba(0,100,160,0.7)}
 body.light-mode .part-header-title{color:var(--c);font-weight:600}
-body.light-mode .ph-btn{color:#0a1f2e;font-weight:600}
+body.light-mode .ph-btn{color:#0a2535;font-weight:700;border-color:rgba(0,100,160,0.5);background:rgba(0,100,160,0.08)}
+body.light-mode .ph-btn:hover{color:#003d66;border-color:rgba(0,100,160,0.8);background:rgba(0,100,160,0.18)}
 body.light-mode .ld-txt{color:#3a5060}
 body.light-mode .pnav-btn{color:#3a5060;border-color:rgba(0,0,0,.15)}
 body.light-mode .pnav-btn:hover,.light-mode .pnav-btn.active{color:var(--c)}
@@ -77,6 +78,24 @@ body.light-mode .nav-links a:hover,body.light-mode .nav-links a.active{color:var
 body.light-mode .grid-bg{background-image:linear-gradient(rgba(0,119,170,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,119,170,.05) 1px,transparent 1px)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+
+/* CUSTOM SCROLLBAR — cyan */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:rgba(0,0,0,.4)}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#00d4ff 0%,rgba(0,212,255,.5) 50%,#f5c542 100%);
+  border-radius:3px;
+  box-shadow:0 0 8px rgba(0,212,255,.6)
+}
+::-webkit-scrollbar-thumb:hover{
+  background:linear-gradient(180deg,#00eeff 0%,#00d4ff 50%,#f5c542 100%);
+  box-shadow:0 0 14px rgba(0,212,255,.9)
+}
+/* Firefox */
+html{scrollbar-width:thin;scrollbar-color:#00d4ff rgba(0,0,0,.4)}
+body.light-mode::-webkit-scrollbar-track{background:rgba(200,220,235,.4)}
+body.light-mode::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#0077aa 0%,rgba(0,119,170,.5) 50%,#b07d08 100%)}
+
 body{background:var(--bg);color:var(--tx);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:crosshair;transition:background .4s,color .4s}
 body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,212,255,.012) 2px,rgba(0,212,255,.012) 4px)}
 body.light-mode::before{background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,136,187,.008) 2px,rgba(0,136,187,.008) 4px)}
@@ -145,9 +164,11 @@ section.wide{max-width:100%;padding:90px 60px 60px}
 .sline-old-removed{}
 
 /* NAV PARTS — horizontal pills */
-.part-nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
-.pnav-btn{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--txm);border:1px solid var(--bd);background:transparent;padding:8px 18px;border-radius:2px;cursor:pointer;transition:all .2s}
-.pnav-btn:hover,.pnav-btn.active{color:var(--c);border-color:var(--bdb);background:var(--c2);text-shadow:0 0 6px var(--cg)}
+.part-nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.pnav-btn{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(200,232,240,0.85);border:1.5px solid rgba(0,212,255,0.45);background:rgba(0,212,255,0.08);padding:12px 24px;border-radius:3px;cursor:pointer;transition:all .2s;font-weight:600}
+.pnav-btn:hover,.pnav-btn.active{color:var(--c);border-color:var(--bdb);background:var(--c2);text-shadow:0 0 8px var(--cg);box-shadow:0 0 14px var(--cg)}
+body.light-mode .pnav-btn{color:#0a2535;border-color:rgba(0,100,160,0.55);background:rgba(0,100,160,0.1);font-weight:700}
+body.light-mode .pnav-btn:hover,body.light-mode .pnav-btn.active{color:#003d66;border-color:rgba(0,100,160,0.85);background:rgba(0,100,160,0.2);box-shadow:0 0 10px rgba(0,100,160,0.25)}
 
 /* PART IFRAME VIEWER */
 .part-viewer{width:100%;border:1px solid var(--bd);border-radius:2px;overflow:hidden;position:relative;background:var(--bg2)}
@@ -155,8 +176,8 @@ section.wide{max-width:100%;padding:90px 60px 60px}
 .part-header{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:var(--bg3);border-bottom:1px solid var(--bd)}
 .part-header-title{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--c);letter-spacing:.12em}
 .part-header-actions{display:flex;gap:8px}
-.ph-btn{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--txm);border:1px solid var(--bd);background:transparent;padding:4px 10px;cursor:pointer;border-radius:1px;text-decoration:none;letter-spacing:.08em;transition:all .2s}
-.ph-btn:hover{color:var(--c);border-color:var(--bdb);background:var(--c2)}
+.ph-btn{font-family:'Share Tech Mono',monospace;font-size:12px;font-weight:600;color:rgba(200,232,240,0.9);border:1.5px solid rgba(0,212,255,0.4);background:rgba(0,212,255,0.07);padding:7px 16px;cursor:pointer;border-radius:2px;text-decoration:none;letter-spacing:.08em;transition:all .2s}
+.ph-btn:hover{color:var(--c);border-color:var(--bdb);background:var(--c2);box-shadow:0 0 10px var(--cg)}
 .part-iframe-wrap{width:100%;height:82vh;position:relative}
 .part-iframe-wrap iframe{width:100%;height:100%;border:none;display:block}
 .part-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg2);z-index:1;transition:opacity .4s}
@@ -362,9 +383,12 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 
 /* INTRO OVERLAY */
 #intro-overlay{
-  position:fixed;inset:0;z-index:99999;background:#000;
+  position:fixed;top:0;left:0;width:100%;
+  z-index:99999;background:#000;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:28px;transition:opacity .8s ease
+  gap:28px;
+  transition:opacity .5s ease;
+  overflow:hidden
 }
 #intro-overlay.fade-out{opacity:0;pointer-events:none}
 #intro-overlay.hidden{display:none}
@@ -398,19 +422,23 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 
 @keyframes intro-spin{to{transform:rotate(360deg)}}
 
-/* Nom — 18px thay vì 11px */
+/* Nom — co giãn theo màn hình để luôn nằm 1 dòng */
 .intro-name{
-  font-family:'Orbitron',monospace;font-size:18px;font-weight:700;
-  letter-spacing:.22em;color:#f5c542;text-transform:uppercase;
-  text-shadow:0 0 20px rgba(245,197,66,.7)
+  font-family:'Orbitron',monospace;font-size:clamp(8px,3vw,18px);font-weight:700;
+  letter-spacing:.14em;color:#f5c542;text-transform:uppercase;
+  text-shadow:0 0 20px rgba(245,197,66,.7);
+  white-space:nowrap;max-width:96vw;overflow:hidden;text-overflow:ellipsis;
+  padding:0 8px;box-sizing:border-box
 }
 
-/* Sous-titre — 13px thay vì 9px, màu sáng hơn */
+/* Sous-titre — co giãn theo màn hình để luôn nằm 1 dòng */
 .intro-sub{
-  font-family:'Share Tech Mono',monospace;font-size:13px;
-  letter-spacing:.28em;
+  font-family:'Share Tech Mono',monospace;font-size:clamp(6px,2.2vw,13px);
+  letter-spacing:.14em;
   color:rgba(160,210,230,.75);   /* était .4 — trop pâle */
-  text-transform:uppercase
+  text-transform:uppercase;
+  white-space:nowrap;max-width:96vw;overflow:hidden;text-overflow:ellipsis;
+  padding:0 8px;box-sizing:border-box
 }
 
 /* Barre — plus large */
@@ -454,7 +482,7 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
     <a href="#dashboard">Dashboard</a>
     <a href="#modele">Modèle</a>
     <a href="#equipe">Équipe</a>
-    <a href="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/" target="_blank" class="nav-ext">Site Quarto ↗</a>
+    <a href="https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/" target="_blank" class="nav-ext">Site Quarto ↗</a>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()"><span class="theme-icon" id="theme-icon">☀️</span><span id="theme-label">Clair</span></button>
   </div>
 </nav>
@@ -473,11 +501,11 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
   <div class="ctas">
     <a href="#viewer" class="btn-p">Explorer les codes</a>
     <a href="#dashboard" class="btn-g">Voir le Dashboard</a>
-    <a href="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/Rapport.pdf" target="_blank" class="btn-g">Voir le Rapport ↗</a>
-    <a href="https://github.com/Hoangviet1810/Projet-Modele-bayesien-pour-ecologie" target="_blank" class="btn-g">GitHub ↗</a>
+    <a href="https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/Rapport.pdf" target="_blank" class="btn-g">Voir le Rapport ↗</a>
+    <a href="https://github.com/ndhviet/Projet-Modele-bayesien-pour-ecologie" target="_blank" class="btn-g">GitHub ↗</a>
   </div>
   <div class="stats-row" data-reveal>
-    <div class="stat-cell"><div class="stat-v gold">2 210</div><div class="stat-l">Occurrences GBIF</div></div>
+    <div class="stat-cell"><div class="stat-v gold">2 209</div><div class="stat-l">Occurrences GBIF</div></div>
     <div class="stat-cell"><div class="stat-v">100K</div><div class="stat-l">Itérations HMC</div></div>
     <div class="stat-cell"><div class="stat-v gold">5</div><div class="stat-l">Chaînes MCMC</div></div>
     <div class="stat-cell"><div class="stat-v">3</div><div class="stat-l">Parties du projet</div></div>
@@ -501,7 +529,7 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
       <div class="pc-num">01</div>
       <div class="pc-tag">// données & pré-traitement</div>
       <div class="pc-title">Extraction des données GBIF</div>
-      <div class="pc-body">2 210 occurrences d'<em>Aedes albopictus</em> extraites via l'API GBIF (R package <code>rgbif</code>). Nettoyage des valeurs manquantes, sélection des colonnes pertinentes, agrégation par site et par année, visualisations géographiques.</div>
+      <div class="pc-body">2 209 occurrences d'<em>Aedes albopictus</em> extraites via l'API GBIF (R package <code>rgbif</code>). Nettoyage des valeurs manquantes, sélection des colonnes pertinentes, agrégation par site et par année, visualisations géographiques.</div>
       <div class="tags"><span class="tag">rgbif</span><span class="tag">dplyr</span><span class="tag">sf</span><span class="tag">ggplot2</span><span class="tag">maps</span></div>
       <div class="pc-goto">→ Voir le code complet</div>
     </div>
@@ -556,7 +584,7 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
     <div class="part-header">
       <div class="part-header-title" id="frame-label">// PARTIE 1 — Extraction des données</div>
       <div class="part-header-actions">
-        <a id="frame-ext-link" href="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/Part1.html" target="_blank" class="ph-btn">Ouvrir ↗</a>
+        <a id="frame-ext-link" href="https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/Part1.html" target="_blank" class="ph-btn">Ouvrir ↗</a>
         <button class="ph-btn" onclick="toggleFullscreen()">Plein écran</button>
       </div>
     </div>
@@ -568,7 +596,7 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
         </div>
       </div>
       <iframe id="main-frame"
-        src="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/Part1.html"
+        src="https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/Part1.html"
         onload="document.getElementById('frame-loader').classList.add('hide')">
       </iframe>
     </div>
@@ -591,7 +619,7 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
     <div class="part-header">
       <div class="part-header-title">// DASHBOARD — Moustique Tigre · Modèle Bayésien</div>
       <div class="part-header-actions">
-        <a href="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/images/dashboard_moustique.html" target="_blank" class="ph-btn">Ouvrir en plein écran ↗</a>
+        <a href="https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/images/dashboard_moustique.html" target="_blank" class="ph-btn">Ouvrir en plein écran ↗</a>
       </div>
     </div>
     <div style="position:relative">
@@ -602,7 +630,7 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
         </div>
       </div>
       <div class="dash-iframe-scaler" id="dash-scaler">
-        <iframe id="dash-iframe" src="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/images/dashboard_moustique.html"
+        <iframe id="dash-iframe" src="https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/images/dashboard_moustique.html"
           onload="document.getElementById('dash-loader').classList.add('hide');scaleDashboard()">
         </iframe>
       </div>
@@ -676,8 +704,8 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
       <div class="tname">NGUYEN Duc Hoang Viet</div>
       <div class="trole">M1 Mathématiques & Applications · ISN</div>
       <div class="tlinks">
-        <a href="https://github.com/Hoangviet1810" target="_blank" class="tlink">GitHub</a>
-        <a href="https://ndhviet.wixsite.com/hviet-portfolio" target="_blank" class="tlink">Portfolio</a>
+        <a href="https://github.com/ndhviet" target="_blank" class="tlink">GitHub</a>
+        <a href="https://ndhviet.github.io/" target="_blank" class="tlink">Portfolio</a>
         <a href="https://www.linkedin.com/in/hoang-viet1810/" target="_blank" class="tlink">LinkedIn</a>
       </div>
     </div>
@@ -693,8 +721,8 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
   <div style="text-align:center;margin-top:36px" data-reveal>
     <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--txm);letter-spacing:.12em;margin-bottom:18px;text-transform:uppercase">Voir le projet complet en ligne</div>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/" target="_blank" class="btn-p">Site Quarto complet ↗</a>
-      <a href="https://github.com/Hoangviet1810/Projet-Modele-bayesien-pour-ecologie" target="_blank" class="btn-g">GitHub ↗</a>
+      <a href="https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/" target="_blank" class="btn-p">Site Quarto complet ↗</a>
+      <a href="https://github.com/ndhviet/Projet-Modele-bayesien-pour-ecologie" target="_blank" class="btn-g">GitHub ↗</a>
     </div>
   </div>
 </section>
@@ -703,9 +731,9 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 <footer>
   <div class="fbrand">MOUSTIQUE TIGRE · BAYES · 2026</div>
   <div class="flinks">
-    <a href="https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/" target="_blank">Site Quarto</a>
-    <a href="https://github.com/Hoangviet1810/Projet-Modele-bayesien-pour-ecologie" target="_blank">GitHub</a>
-    <a href="https://ndhviet.wixsite.com/hviet-portfolio" target="_blank">Portfolio</a>
+    <a href="https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/" target="_blank">Site Quarto</a>
+    <a href="https://github.com/ndhviet/Projet-Modele-bayesien-pour-ecologie" target="_blank">GitHub</a>
+    <a href="https://ndhviet.github.io/" target="_blank">Portfolio</a>
     <a href="https://www.gbif.org/" target="_blank">GBIF</a>
   </div>
   <div class="fcopy">© 2026 NGUYEN D.H.V. & Tchanang Y.M. — Université de Lille</div>
@@ -714,10 +742,10 @@ nav::after{content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;bac
 
 <script>
 const partConfig = {
-  part1:   { label:'// PARTIE 1 — Extraction des données',          url:'https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/Part1.html',    btn:'01 · Données' },
-  part2_1: { label:'// PARTIE 2A — Modèle Bayésien Version 1',      url:'https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/Part2_1.html',  btn:'02A · Modèle V1' },
-  part2_2: { label:'// PARTIE 2B — Modèle Bayésien Version 2',      url:'https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/Part2_2.html',  btn:'02B · Modèle V2' },
-  part3:   { label:'// PARTIE 3 — Extension & Covariable Température', url:'https://hoangviet1810.github.io/Projet-Modele-bayesien-pour-ecologie/Part3.html', btn:'03 · Extension' }
+  part1:   { label:'// PARTIE 1 — Extraction des données',          url:'https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/Part1.html',    btn:'01 · Données' },
+  part2_1: { label:'// PARTIE 2A — Modèle Bayésien Version 1',      url:'https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/Part2_1.html',  btn:'02A · Modèle V1' },
+  part2_2: { label:'// PARTIE 2B — Modèle Bayésien Version 2',      url:'https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/Part2_2.html',  btn:'02B · Modèle V2' },
+  part3:   { label:'// PARTIE 3 — Extension & Covariable Température', url:'https://ndhviet.github.io/Projet-Modele-bayesien-pour-ecologie/Part3.html', btn:'03 · Extension' }
 };
 
 function openPart(id) {
@@ -766,12 +794,18 @@ document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
 // INTRO OVERLAY
 (function(){
   const overlay = document.getElementById('intro-overlay');
+  // Fix iOS Safari: set real screen height via JS
+  function setOverlayHeight(){
+    overlay.style.height = window.innerHeight + 'px';
+  }
+  setOverlayHeight();
+  window.addEventListener('resize', setOverlayHeight);
   document.body.style.overflow = 'hidden';
   setTimeout(() => {
     overlay.classList.add('fade-out');
     document.body.style.overflow = '';
-    setTimeout(() => overlay.classList.add('hidden'), 900);
-  }, 2400);
+    setTimeout(() => overlay.classList.add('hidden'), 600);
+  }, 1400);
 })();
 
 // THEME TOGGLE
